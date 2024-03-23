@@ -1,0 +1,47 @@
+Blaine Colwell | CS120
+Basic Animation lab
+
+
+Overview:
+
+This program utilizes pygame to display an image of my cat and move it. 
+
+Although it will not be fully reflected in the pseudocode due to the extensive trial-and-error that was required to get it working correctly, the image bounces off of the edges in a manner reminiscent of DVD screensavers.
+
+
+
+Pseudocode:
+
+import random
+import math
+import pygame
+initialize pygame
+
+create a screen with width 640 and height 480
+set the screen caption
+
+create an object for the background called "object" with screen size
+fill the background with a color
+
+create an object for an image called "cat"; load the image
+convert with alpha
+scale down as needed
+create two variables called "cat_x" and "cat_y"; set to 0
+
+create an int variable called "randomAngle"; generate an angle between 0 and 360 degrees and conver this to radians
+create two variables called "randomAngle_x" and "randomAngle_y"; both of these are set equa to randomAngle
+
+create a pygame clock object
+
+create a boolean variable called "continueMainLoop"
+while continueMainLoop is true:
+| clock tick
+|
+| check if the user has quit; if so, set continueMainLoop to false
+|
+| if cat_x is outside of the screen range, flip randomAngle_x
+| if cat_y is outside of the screen range, flip randomAngle_y
+|
+| update the screen
+
+quite pygame
